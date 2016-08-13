@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VITASDK_VER=c86e2b4b45bd9cad07abbbcb208519b0357a639a
+VITASDK_VER=a027b34a22e39939bd8ce98407289d8bded78e4b
 
 case "$(uname -s)" in
    Darwin*)
@@ -37,10 +37,10 @@ case "$(uname -s)" in
 esac
 
 if [ "${UNIX}" = true ]; then
-    wget -O "vitasdk-nightly.tar.bz2" "https://bintray.com/vitasdk/vitasdk/download_file?file_path=vitasdk-${VITASDK_PLATFORM}-nightly-${VITASDK_VER}.tar.bz2"
+    wget -O "vitasdk-nightly.tar.bz2" "https://bintray.com/vitasdk/vitasdk/download_file?file_path=vitasdk-gcc-5.4-${VITASDK_PLATFORM}-nightly-${VITASDK_VER}.tar.bz2"
     tar xf "vitasdk-nightly.tar.bz2" -C /usr/local/vitasdk --strip-components=1
 else
-    wget -O "vitasdk-nightly.zip" "https://bintray.com/vitasdk/vitasdk/download_file?file_path=vitasdk-win32-nightly-${VITASDK_VER}.zip"
+    wget -O "vitasdk-nightly.zip" "https://bintray.com/vitasdk/vitasdk/download_file?file_path=vitasdk-gcc-5.4-win32-nightly-${VITASDK_VER}.zip"
     7z x -o/usr/local/vitasdk vitasdk-nightly.zip
 fi
 echo "Please add the following to the bottom of your .bashrc:"
